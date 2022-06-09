@@ -1,0 +1,87 @@
+nav{
+    background-color: #050829;
+    padding: 1rem 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.item{
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    padding: 0.5rem ;
+    text-align: center;
+    font-size: 22px;
+}
+.item:hover{
+    background-color: #708DDE;
+    color:white;
+}
+nav img{
+    text-align: center;
+    margin: auto;
+    display: flex;
+}
+.logo i{
+    color: white;
+    font-size: 28px;
+    position: absolute;
+    margin:0 0 0 30px;
+    top: 10%;
+}
+#chk-menu{
+    display: none;
+}
+#chk-menu:checked ~ .items{
+    display: block;
+    display: flex;
+    flex-direction: column;
+}
+.items{
+    display:none;
+}
+body{
+    background-color:  #050829;
+}
+@media screen and (min-width:768px) {
+    nav{
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0rem 1.5rem;
+    }
+    #chk-menu:checked ~ .items{
+        flex-direction: row;
+        width: 10vh;
+    }
+    .items{
+        display:contents;
+    }
+    .items{
+        width: 800px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    .btn-menu{
+        display: none;
+    }
+    .hidden{
+        visibility: hidden;
+    }
+}
+@media screen and (min-width:1024px) {
+    nav{
+        padding:0 3.5rem;
+    }
+    .hidden{
+        visibility: visible;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    nav{
+        padding:0 5.9rem;
+    }
+}
